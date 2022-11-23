@@ -51,7 +51,7 @@ def remove_BHK_outliers(df):
 
 @st.cache
 def load_data():
-    df1 = pd.read_csv(r"C:\Users\USER\Downloads\datasets_20710_26737_Bengaluru_House_Data.csv")
+    df1 = pd.read_csv(r"https://raw.githubusercontent.com/Ikenna-The-Data-Guy/BHP-Project-on-Streamlit/main/datasets_20710_26737_Bengaluru_House_Data.csv")
     df2 = df1.drop(['area_type','availability','society','balcony'],axis='columns')
     df3 = df2.dropna()
     df3['BHK'] = df3['size'].apply(lambda x: int(x.split(' ')[0]))
